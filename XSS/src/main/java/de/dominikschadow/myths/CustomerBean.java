@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.dominikschadow.webappsecurity;
+package de.dominikschadow.myths;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
