@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.dominikschadow.webappsecurity;
+package de.dominikschadow.myths;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -28,7 +28,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import de.dominikschadow.webappsecurity.csrf.CSRFTokenHandler;
 
 /**
  * @author Dominik Schadow
