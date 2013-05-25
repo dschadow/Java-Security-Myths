@@ -33,16 +33,10 @@ import javax.servlet.http.HttpServletResponse;
 public class CSRFServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public CSRFServlet() {
         super();
     }
 
-    /**
-     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-     */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         System.out.println("Processing unprotected GET request");
 
@@ -58,9 +52,6 @@ public class CSRFServlet extends HttpServlet {
         }
     }
 
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         System.out.println("Processing unprotected POST request");
 
