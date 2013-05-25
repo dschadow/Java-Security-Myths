@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2013 Dominik Schadow, dominikschadow@gmail.com
  *
- * This file is part of JavaWebAppSecurity.
+ * This file is part of the Java Security Myths project.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 
 /**
  * @author Dominik Schadow
