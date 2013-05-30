@@ -61,7 +61,7 @@ public class CSRFServlet extends HttpServlet {
         response.setContentType("text/html");
 
         try (PrintWriter out = response.getWriter()) {
-            out.println("Received " + name + " as GET parameter");
+            out.println("Received " + name + " as POST parameter");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
