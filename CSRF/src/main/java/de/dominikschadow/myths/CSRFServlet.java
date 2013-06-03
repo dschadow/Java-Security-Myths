@@ -38,7 +38,7 @@ public class CSRFServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-        System.out.println("Processing unprotected GET request");
+        System.out.println("Unprotected: Processing GET request");
 
         String name = request.getParameter("name");
         System.out.println("Unprotected: Received " + name + " as GET parameter");
@@ -53,7 +53,7 @@ public class CSRFServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-        System.out.println("Processing unprotected POST request");
+        System.out.println("Unprotected: Processing POST request");
 
         String name = request.getParameter("name");
         System.out.println("Unprotected: Received " + name + " as POST parameter");

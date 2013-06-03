@@ -40,13 +40,13 @@ public class ProtectedServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-        System.out.println("Processing protected GET request");
+        System.out.println("Protected: Processing GET request");
 
         response.setContentType("text/html");
         
         try {
             if (!CSRFTokenHandler.isValid(request)) {
-                System.out.println("CSRF token is invalid");
+                System.out.println("Protected: CSRF token is invalid");
                 response.setStatus(401);
 
                 try (PrintWriter out = response.getWriter()) {
@@ -61,7 +61,7 @@ public class ProtectedServlet extends HttpServlet {
             ex.printStackTrace();
         }
         
-        System.out.println("CSRF token is valid");
+        System.out.println("Protected: CSRF token is valid");
 
         String name = request.getParameter("name");
         System.out.println("Protected: Received " + name + " as GET parameter");
@@ -74,13 +74,13 @@ public class ProtectedServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException {
-        System.out.println("Processing protected POST request");
+        System.out.println("Protected: Processing POST request");
 
         response.setContentType("text/html");
         
         try {
             if (!CSRFTokenHandler.isValid(request)) {
-                System.out.println("CSRF token is invalid");
+                System.out.println("Protected: CSRF token is invalid");
                 response.setStatus(401);
 
                 try (PrintWriter out = response.getWriter()) {
@@ -95,7 +95,7 @@ public class ProtectedServlet extends HttpServlet {
             ex.printStackTrace();
         }
         
-        System.out.println("CSRF token is valid");
+        System.out.println("Protected: CSRF token is valid");
 
         String name = request.getParameter("name");
         System.out.println("Protected: Received " + name + " as POST parameter");
