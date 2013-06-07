@@ -31,6 +31,8 @@
 	
 	<p><a href="xmlhttprequest.html">XMLHttpRequest</a></p>
 	
+	<br/><br/>
+	
 	<h2>Protected GET</h2>
 	
 	<p><a href="ProtectedServlet?name=BrowserLink&<%=CSRFTokenHandler.CSRF_TOKEN%>=<%=CSRFTokenHandler.getToken(request.getSession(false))%>">Link</a></p>
