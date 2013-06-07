@@ -29,6 +29,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Basic protected servlet for GET and POST requests. Checks the CSRF-Token value to identify CSRF attacks. Prints out
+ * some command line information and returns the received parameter as response.
+ * 
  * @author Dominik Schadow
  */
 @WebServlet(name = "ProtectedServlet", urlPatterns = {"/ProtectedServlet"})
@@ -43,7 +46,7 @@ public class ProtectedServlet extends HttpServlet {
         System.out.println("Protected: Processing GET request");
 
         response.setContentType("text/html");
-        
+
         try {
             if (!CSRFTokenHandler.isValid(request)) {
                 System.out.println("Protected: CSRF token is invalid");
@@ -54,13 +57,13 @@ public class ProtectedServlet extends HttpServlet {
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-                
+
                 return;
             }
         } catch (NoSuchAlgorithmException | NoSuchProviderException ex) {
             ex.printStackTrace();
         }
-        
+
         System.out.println("Protected: CSRF token is valid");
 
         String name = request.getParameter("name");
@@ -77,7 +80,7 @@ public class ProtectedServlet extends HttpServlet {
         System.out.println("Protected: Processing POST request");
 
         response.setContentType("text/html");
-        
+
         try {
             if (!CSRFTokenHandler.isValid(request)) {
                 System.out.println("Protected: CSRF token is invalid");
@@ -88,13 +91,13 @@ public class ProtectedServlet extends HttpServlet {
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-                
+
                 return;
             }
         } catch (NoSuchAlgorithmException | NoSuchProviderException ex) {
             ex.printStackTrace();
         }
-        
+
         System.out.println("Protected: CSRF token is valid");
 
         String name = request.getParameter("name");
