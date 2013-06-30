@@ -17,12 +17,15 @@
  */
 package de.dominikschadow.myths;
 
+import java.io.Serializable;
+
 /**
  * Represents one Status array entry.
  * 
  * @author Dominik Schadow
  */
-public class Status {
+public class Status implements Serializable {
+    private static final long serialVersionUID = -5176873476153674154L;
     private String label;
     private String value;
 
