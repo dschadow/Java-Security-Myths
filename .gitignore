@@ -2,6 +2,7 @@
 */target
 .classpath
 .project
+*.iml
 */.settings
 
 # Package Files #
