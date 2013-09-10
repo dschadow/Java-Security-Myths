@@ -1,6 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-  http://maven.apache.org/maven-v4_0_0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.dominikschadow.myths</groupId>
 	<artifactId>XSS</artifactId>
@@ -8,9 +7,9 @@
 	<packaging>war</packaging>
 	<name>XSS</name>
 	<url>https://github.com/dschadow/JavaSecurityMyths</url>
-	<description>XSS with JSF sample project. Requires a server like Apache Tomcat.
+	<description>XSS with JSF sample project. Requires a server like Apache Tomcat or use the Maven-Tomcat7-Plug-in with mvn tomcat7:run-war
 
-Open the web application in your browser at http://localhost:8080/XSS/</description>
+        Open the web application in your browser at http://localhost:8080/XSS</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,25 +19,25 @@ Open the web application in your browser at http://localhost:8080/XSS/</descript
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.1.22</version>
+			<version>2.1.26</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>2.1.22</version>
+			<version>2.1.26</version>
 		</dependency>
-		<!--
+        <!--
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.2.0</version>
+			<version>2.2.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>2.2.0</version>
+			<version>2.2.3</version>
 		</dependency>
-		-->
+        -->
 	</dependencies>
 
 	<build>
@@ -56,6 +55,14 @@ Open the web application in your browser at http://localhost:8080/XSS/</descript
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.1</version>
+                <configuration>
+                    <contextFile>${project.basedir}/src/main/resources/context.xml</contextFile>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
             </plugin>
         </plugins>
 	</build>
