@@ -7,7 +7,7 @@
 	<packaging>war</packaging>
 	<name>CSRF</name>
 	<url>https://github.com/dschadow/JavaSecurityMyths</url>
-    <description>CSRF sample project. Requires a server like Apache Tomcat or use the Maven-Tomcat7-Plug-in with mvn tomcat7:run
+    <description>CSRF sample project. Requires a server like Apache Tomcat or use the Maven-Tomcat7-Plug-in with mvn tomcat7:run-war
 
         Open the web application in your browser at http://localhost:8080/CSRF</description>
 
