@@ -31,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Basic protected servlet for GET and POST requests. Checks the CSRF-Token value to identify CSRF attacks. Prints out
  * some command line information and returns the received parameter as response.
- * 
+ *
  * @author Dominik Schadow
  */
 @WebServlet(name = "ProtectedServlet", urlPatterns = {"/ProtectedServlet"})

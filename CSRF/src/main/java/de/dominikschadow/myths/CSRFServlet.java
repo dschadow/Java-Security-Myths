@@ -29,7 +29,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Basic unprotected servlet for GET and POST requests. Prints out some command line information and returns the
  * received parameter as response.
- * 
+ *
  * @author Dominik Schadow
  */
 @WebServlet(name = "CSRFServlet", urlPatterns = {"/CSRFServlet"})
