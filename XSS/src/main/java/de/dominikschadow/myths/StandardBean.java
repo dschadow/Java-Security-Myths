@@ -54,7 +54,7 @@ public class StandardBean implements Serializable {
     public void setInput(String input) {
         this.input = input;
 
-        standardMap = new LinkedHashMap<String, String>();
+        standardMap = new LinkedHashMap<>();
         standardMap.put(input, input);
 
         standardArray = new Status[1];

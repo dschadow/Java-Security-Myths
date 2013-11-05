@@ -54,7 +54,7 @@ public class MaximumBean implements Serializable {
     public void setInput(String input) {
         this.input = input;
 
-        maximumMap = new LinkedHashMap<String, String>();
+        maximumMap = new LinkedHashMap<>();
         maximumMap.put(input, input);
 
         maximumArray = new Status[1];
