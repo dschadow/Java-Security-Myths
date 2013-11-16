@@ -34,12 +34,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "CSRFServlet", urlPatterns = {"/CSRFServlet"})
 public class CSRFServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-
-    public CSRFServlet() {
-        super();
-    }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         System.out.println("Unprotected: Processing GET request");
 

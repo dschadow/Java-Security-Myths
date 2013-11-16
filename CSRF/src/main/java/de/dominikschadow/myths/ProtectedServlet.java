@@ -36,12 +36,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "ProtectedServlet", urlPatterns = {"/ProtectedServlet"})
 public class ProtectedServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-
-    public ProtectedServlet() {
-        super();
-    }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         System.out.println("Protected: Processing GET request");
 
