@@ -6,7 +6,7 @@
 	
 	<h1>XSS with Java Server Faces</h1>
 	
-	<h2>Default Protection</h2>
+	<h2>With Default Attributes</h2>
 	
 	<h:form id="standard">
 		<h:inputText value="#{standard.input}" id="standard" styleClass="text-input" />
@@ -14,7 +14,7 @@
 		<h:commandButton value="Send" action="standard" styleClass="send-button" />
 	</h:form>
 	
-	<h2>Maximum Protection</h2>
+	<h2>With Security Attributes</h2>
 	
 	<h:form id="maximum">
 		<h:inputText value="#{maximum.input}" id="maximum" styleClass="text-input" />
