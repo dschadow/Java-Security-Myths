@@ -34,7 +34,7 @@ import javax.faces.bean.SessionScoped;
 public class MaximumBean implements Serializable {
     private static final long serialVersionUID = 600561947836364528L;
 
-    private String input = "<script>alert('Session ID ' + document.cookie)</script>";
+    private String input = "<script>alert(document.cookie)</script>";
 
     private Map<String, String> maximumMap = null;
     private Status[] maximumArray = null;

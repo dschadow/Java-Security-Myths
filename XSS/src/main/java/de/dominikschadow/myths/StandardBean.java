@@ -34,7 +34,7 @@ import javax.faces.bean.SessionScoped;
 public class StandardBean implements Serializable {
     private static final long serialVersionUID = 4083596061570021965L;
 
-    private String input = "<script>alert('Session ID ' + document.cookie)</script>";
+    private String input = "<script>alert(document.cookie)</script>";
 
     private Map<String, String> standardMap = null;
     private Status[] standardArray = null;
