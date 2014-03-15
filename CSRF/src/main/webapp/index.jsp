@@ -5,10 +5,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css" />
-	<title>Cross-Site Request Forgery</title>
+	<title>Cross-Site Request Forgery (CSRF)</title>
 </head>
 <body>
-	<h1>Cross-Site Request Forgery</h1>
+	<h1>Cross-Site Request Forgery (CSRF)</h1>
 	
 	<h2>Unprotected GET request executed via</h2>
 	
