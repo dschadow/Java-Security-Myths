@@ -4,6 +4,7 @@
 .project
 *.iml
 */.settings
+.Idea*
 
 # Package Files #
 *.jar
