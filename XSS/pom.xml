@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.dominikschadow.myths</groupId>
-	<artifactId>XSS</artifactId>
+	<artifactId>xss</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
-	<name>XSS</name>
+	<name>Cross-Site Scripting</name>
 	<url>https://github.com/dschadow/JavaSecurityMyths</url>
 	<description>XSS with JSF sample project. Requires a server like Apache Tomcat or use the Maven-Tomcat7-Plug-in with mvn tomcat7:run-war
 
@@ -29,7 +29,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>XSS</finalName>
+		<finalName>xss</finalName>
 		<plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
