@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
 	<title>Cross-Site Request Forgery (CSRF)</title>
 </head>
 <body>
@@ -18,16 +18,13 @@
 	
 	<h2>Unprotected POST request executed via</h2>
 	
-	<h3>Form</h3>
-
 	<form name="greeting" method="post" action="CSRFServlet">
-		<table>
-			<tr>
-				<td>Name</td>
-				<td><input type="text" name="name"></td>
-				<td><input type="submit" value="Send"></td>
-			</tr>
-		</table>
+        <fieldset>
+            <legend>Form</legend>
+            <label for="name">Name</label>
+		    <input type="text" id="name" name="name">
+			<input type="submit" value="Send">
+        </fieldset>
 	</form>
 	
 	<p><a href="xmlhttprequest.html">XMLHttpRequest</a></p>
@@ -41,21 +38,18 @@
 	<p><a href="image-protected.html">&lt;img src=&quot;ProtectedServlet?name=CSRF-Image&quot; width=&quot;0&quot; height=&quot;0&quot; /&gt;</a></p>
 	
 	<h2>Protected POST request executed via</h2>
-	
-	<h3>Form</h3>
 
-	<form name="greetingProtected" method="post" action="ProtectedServlet">
-		<input type="hidden" name="<%=CSRFTokenHandler.CSRF_TOKEN%>"
-		  value="<%=CSRFTokenHandler.getToken(request.getSession(false))%>">
-		<table>
-			<tr>
-				<td>Name</td>
-				<td><input type="text" name="name"></td>
-				<td><input type="submit" value="Send"></td>
-			</tr>
-		</table>
-	</form>
-	
+    <form name="greetingProtected" method="post" action="ProtectedServlet">
+        <input type="hidden" name="<%=CSRFTokenHandler.CSRF_TOKEN%>"
+               value="<%=CSRFTokenHandler.getToken(request.getSession(false))%>">
+        <fieldset>
+            <legend>Form</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <input type="submit" value="Send">
+        </fieldset>
+    </form>
+
 	<p><a href="xmlhttprequest-protected.html">XMLHttpRequest</a></p>
 </body>
 </html>

@@ -1,8 +1,9 @@
 <html>
 <head>
-  <title>Cross-Site Request Forgery</title>
+    <title>Cross-Site Request Forgery</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
   
-  <script type="text/javascript">
+    <script type="text/javascript">
     function sendForm() {
       var params = "name=CSRF-XMLHttpRequest";
 
@@ -17,9 +18,9 @@
         }
       };
     }
-  </script>
+    </script>
 </head>
 <body onload="sendForm()">
-  <h1>Form post with XMLHttpRequest</h1> 
+    <h1>Form post with XMLHttpRequest</h1>
 </body>
 </html>

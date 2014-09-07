@@ -1,0 +1,29 @@
+input[type=submit] {
+    width: 75px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+fieldset {
+    width: 450px;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+h1 {
+	font-size: 125%;
+}
+
+h2 {
+	font-size: 110%;
+}
