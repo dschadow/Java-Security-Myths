@@ -9,7 +9,7 @@
 	<url>https://github.com/dschadow/JavaSecurityMyths</url>
 	<description>XSS with JSF sample project. Requires a server like Apache Tomcat or use the Maven-Tomcat7-Plug-in with mvn tomcat7:run-war
 
-        Open the web application in your browser at http://localhost:8080/XSS</description>
+        Open the web application in your browser at http://localhost:8080/xss</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,12 +19,12 @@
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.2.8-04</version>
+			<version>2.2.10</version>
 		</dependency>
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>2.2.8-04</version>
+			<version>2.2.10</version>
 		</dependency>
 	</dependencies>
 
@@ -33,7 +33,7 @@
 		<plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.3</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
@@ -50,7 +50,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.6</version>
             </plugin>
         </plugins>
 	</build>
